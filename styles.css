@@ -53,7 +53,7 @@ p {
   line-height: 1.6;
 }
 strong {
-  font-size: 4rem;
+  font-size: clamp(4rem, 6vw, 6rem);
   color: var(--Very-Dark-Cyan);
 }
 nav {
@@ -271,7 +271,7 @@ footer button {
 .icons {
   display: flex;
   gap: 0.875em;
-  justify-content: center;
+
   padding-top: 2em;
 }
 .fa-brands {
@@ -320,7 +320,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 6em;
+    gap: 15%;
   }
   .grow-section .container {
     display: flex;
@@ -362,41 +362,53 @@ button:hover {
     margin-top: 0;
     padding-top: 0;
   }
-}
-.users .container {
-  display: flex;
-  flex-direction: row-reverse;
-}
-.users::before {
-  content: "";
-  background: url(/images/bg-section-top-desktop-2.svg) no-repeat top center;
-  background-size: cover;
-  display: block;
-  height: 200px;
-  width: 100%;
-}
-.users::after {
-  content: "";
-  background: url(/images/bg-section-bottom-desktop-2.svg) no-repeat bottom
-    center;
-  background-size: cover;
-  display: block;
-  height: 200px;
-  width: 100%;
-}
-footer .container {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  gap: 4em;
-}
+  .users .container {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: left;
+    gap: 4em;
+  }
+  .users::before {
+    content: "";
+    background: url(/images/bg-section-top-desktop-2.svg) no-repeat top center;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    width: 100%;
+  }
+  .users::after {
+    content: "";
+    background: url(/images/bg-section-bottom-desktop-2.svg) no-repeat bottom
+      center;
+    background-size: cover;
+    display: block;
+    height: 200px;
+    width: 100%;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+  }
 
-footer::before {
-  content: "";
-  background: url(/images/bg-footer-top-desktop.svg) no-repeat top center;
-  background-size: cover;
-  display: block;
-  height: 190px;
-  width: 100%;
+  footer::before {
+    content: "";
+    background: url(/images/bg-footer-top-desktop.svg) no-repeat top center;
+    background-size: cover;
+    display: block;
+    height: 190px;
+    width: 100%;
+  }
+  .intro {
+    padding-top: 2em;
+  }
+  .intro p {
+    max-width: 400px;
+  }
+  .newsletter {
+    padding-top: 0;
+    margin-top: 0;
+  }
 }
